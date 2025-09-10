@@ -10,7 +10,7 @@
 
             Console.WriteLine(pel1);
             Console.WriteLine($"El pais del director de la pelicula {pel1.Titulo} es {pel1.Director.GetNombrePais()}");
-
+            //Prueba desde GITHUB
             Console.WriteLine("Prueba GITHUB");
 
             Console.ReadKey();
