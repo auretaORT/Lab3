@@ -14,7 +14,8 @@ namespace Ejercicio3
         public Genero Genero { get; set; }
         public DateTime FechaLanzamiento { get; set; }
         public int Duracion { get; set; }//en minutos
-        public List<Director> Directores { get; set; }
+        // las listas siempre privada y sin set
+        private List<Director> Directores  = new List<Director>();
 
         public Pelicula()
         {
@@ -44,7 +45,7 @@ namespace Ejercicio3
         //para mayores de 13. 
         public bool EsApta()
         {
-            if(Genero == Genero.Terror || Genero == Genero.Suspenso || Genero == Genero.Thriller)
+            if (Genero == Genero.Terror || Genero == Genero.Suspenso || Genero == Genero.Thriller)
             {
                 return false;
             }
@@ -56,6 +57,21 @@ namespace Ejercicio3
         //    return $"La pelicula {Titulo} es del genero {Genero} y es dirigida por el director {Director.NombreCompleto}";
         //}
 
+
+        public void AgregarDirector(Director dir)
+        {
+            //dir.Validar();
+            if (dir != null)
+            {
+                Directores.Add(dir);
+
+            }
+        }
+
+        public List<Director> GetDirectores()
+        {
+            return Directores;
+        }
 
     }
 }

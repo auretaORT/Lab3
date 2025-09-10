@@ -23,6 +23,7 @@ namespace Ejercicio3
             Id = UltimoId++;
             Pais = pais;
             NombreCompleto = nombreCompleto;
+            //Validar();
         }
 
         public string GetNombrePais()
