@@ -14,21 +14,21 @@ namespace Ejercicio3
         public Genero Genero { get; set; }
         public DateTime FechaLanzamiento { get; set; }
         public int Duracion { get; set; }//en minutos
-        public Director Director { get; set; }
+        public List<Director> Directores { get; set; }
 
         public Pelicula()
         {
             Id = UltimoId++;
         }
 
-        public Pelicula(string titulo, Genero genero, DateTime fechaLanzamiento, int duracion, Director director)
+        public Pelicula(string titulo, Genero genero, DateTime fechaLanzamiento, int duracion/*, Director director*/)
         {
             Id = UltimoId++;
             Titulo = titulo;
             Genero = genero;
             FechaLanzamiento = fechaLanzamiento;
             Duracion = duracion;
-            Director = director;
+            //Director = director;
         }
 
         //La fecha de baja del catálogo, sabiendo que es
@@ -51,10 +51,10 @@ namespace Ejercicio3
             return true;
         }
 
-        public override string ToString()
-        {
-            return $"La pelicula {Titulo} es del genero {Genero} y es dirigida por el director {Director.NombreCompleto}";
-        }
+        //public override string ToString()
+        //{
+        //    return $"La pelicula {Titulo} es del genero {Genero} y es dirigida por el director {Director.NombreCompleto}";
+        //}
 
 
     }
